@@ -265,7 +265,8 @@ class DiscreteCarRacing(gym.ActionWrapper):
         self.last_speed = state_speed
         self.last_ang_val = state_angle_vel
 
-        return observation, rew, term, trunc, info
+
+        return observation, rew, term, trunc, obs
 
 def get_environment(env_type, stack_size, render_mode, do_flips=False, need_dual=False):
     env = gym.make("CarRacing-v3", domain_randomize=False, continuous=True, render_mode=render_mode)
